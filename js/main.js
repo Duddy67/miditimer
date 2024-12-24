@@ -61,14 +61,11 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(sendMIDIEvent, nineMinutes, midi, MIDIMessage);
 
     document.getElementById('sendButton').addEventListener('click', (e) => {
-        //MIDIMessage[2] = MIDIMessage[2] == 1 ? 0 : 1;
         midi.sendMIDIMessage(MIDIMessage);
     });
 });
 
 function sendMIDIEvent(midi, message) {
-    // 
-    //message[2] = message[2] == 1 ? 0 : 1;
     midi.sendMIDIMessage(message);
 }
 
